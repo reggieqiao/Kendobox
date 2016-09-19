@@ -1,8 +1,8 @@
-# kendobox
+# Kendobox
 Kendo UI Components Plugins Custom alert, confirm, dialog, validator, notice (Kendo UI 组件扩展插件，自定义alert, confirm, dialog, validator, notice) 
 
 # Examples (实例)
-[Examples address](https://reggieqiao.github.io/kendobox/examples/) ([演示地址](https://reggieqiao.github.io/kendobox/examples/))
+[Examples address](https://reggieqiao.github.io/Kendobox/examples/) ([演示地址](https://reggieqiao.github.io/Kendobox/examples/))
 
 # Dependencies (依赖)
 1. Latest version of [jQuery](https://jquery.com/). (最新版本[jQuery](https://jquery.com/))
@@ -27,4 +27,4 @@ $.kendobox.dialog($('#tpl-dialog').html(), function() {
 	});
 });
 ```
-See more examples of usage (更多使用请看演示): https://reggieqiao.github.io/kendobox/examples/ 
+See more examples of usage (更多使用请看演示): https://reggieqiao.github.io/Kendobox/examples/ 
