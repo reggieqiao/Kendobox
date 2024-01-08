@@ -44,12 +44,6 @@ layout: default
   </div>
   <hr><br>
 
-  <div>
-    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox dialog iframe</span><br><span style="color:#000">$</span>(<span style="color:#a11">'#btn-dialog-iframe'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">_$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">dialog</span>(<span style="color:#000">$</span>(<span style="color:#a11">'#tpl-dialog'</span>).<span style="color:#000">html</span>(),<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">_$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">validator</span>(<span style="color:#a11">'form[name=dialog]'</span>,<br>    <span style="color:#708">function</span>() {<br>      <span style="color:#708">var</span> <span style="color:#00f">data</span> = <span style="color:#000">_$</span>(<span style="color:#a11">'form[name=dialog]'</span>).<span style="color:#000">serializeArray</span>();<br>      <span style="color:#000">_$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Dialog iframe result: '</span> + <span style="color:#000-2">data</span>[<span style="color:#164">0</span>].<span style="color:#000">value</span>);<br>      <span style="color:#000">_$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>    });<br>  });<br>});<br><span style="color:#a50">//End:kendobox dialog iframe</span><br></pre>
-    <a href="javascript:;" class="k-button k-primary" id="btn-iframe-dialog">Iframe Dialog</a>
-  </div>
-  <hr><br>
-
 </div>
 
 <script id="tpl-dialog" type="text/x-kendo-template">
@@ -178,16 +172,4 @@ $('#btn-custom-dialog').click(function () {
   });
 });
 //End:kendobox custom dialog
-
-//Begin:kendobox iframe dialog
-$('#btn-iframe-dialog').click(function () {
-  _$.kendobox.dialog($('#tpl-dialog').html(), function() {
-    _$.kendobox.validator('form[name=dialog]', function(){
-      var data = _$('form[name=dialog]').serializeArray();
-      _$.kendobox.notice_info('Dialog iframe result: ' + data[0].value);
-      _$.kendobox.close();
-    });
-  });
-});
-//End:kendobox dialog iframe
 </script>
