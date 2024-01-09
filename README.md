@@ -1,30 +1,35 @@
 # Kendobox
-Kendo UI Components Plugins Custom alert, confirm, dialog, validator, notice (Kendo UI 组件扩展插件，自定义alert, confirm, dialog, validator, notice) 
+Kendo UI Components Plugins Custom alert, confirm, dialog, validator, notice
 
-# Examples (实例)
-[Examples address](https://reggieqiao.github.io/Kendobox/examples/) ([演示地址](https://reggieqiao.github.io/Kendobox/examples/))
+# Examples
+[See examples](https://reggieqiao.github.io/kendobox)
 
-# Dependencies (依赖)
-1. Latest version of [jQuery](https://jquery.com/). (最新版本[jQuery](https://jquery.com/))
-2. [Kendo UI](http://demos.telerik.com/kendo-ui/).
+# Dependencies 
+1. Latest version of [jQuery](https://jquery.com/)
+2. [Kendo UI](http://demos.telerik.com/kendo-ui/)
 
-# Usage (使用)
-Include the dependencies and jquery.kendobox.min.js into your page and call the following (在页面上引用依赖文件和 jquery.kendobox.min.js 文件，像下面那样调用):
-```javascript
-$.kendobox.alert('Hello world');
+# Usage
+1. Kendo UI style:
+```html
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
 ```
+
+2. jQuery and Kendo UI js and kendobox:
+```html
+<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"></script>
+<!-- Kendo UI js -->
+<script src="https://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"></script>
+<!-- kendobox -->
+<script src="assets/js/jquery.kendobox.min.js"></script>
+```
+
+kendobox alert:
 ```javascript
-$.kendobox.confirm('Are you sure?', function() {
-	$.kendobox.notice_info('Confirm result: yes');
+$('#btn-alert').click(function () {
+  $.kendobox.alert('Hello world', function() {
+    $.kendobox.notice_info('Hello world callback');
+  });
 });
 ```
-```javascript
-$.kendobox.dialog($('#tpl-dialog').html(), function() {
-	$.kendobox.validator('form[name=dialog]', function(){
-		var data = $('form[name=dialog]').serializeArray();
-		$.kendobox.notice_info('Dialog result: ' + data[0].value);
-		$.kendobox.close();
-	});
-});
-```
-See more examples of usage (更多使用请看演示): https://reggieqiao.github.io/Kendobox/examples/ 
