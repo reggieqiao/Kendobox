@@ -33,3 +33,112 @@ $('#btn-alert').click(function () {
   });
 });
 ```
+
+kendobox custom alert:
+```javascript
+$('#btn-custom-alert').click(function () {
+  $.kendobox.alert('Hello world', function() {
+    $.kendobox.notice_info('Hello world callback');
+  },{
+    width: 600,
+    title: 'Custom Alert'
+  });
+});
+```
+
+kendobox confirm:
+```javascript
+$('#btn-confirm').click(function () {
+  $.kendobox.confirm('Are you sure?', function() {
+    $.kendobox.notice_info('Confirm result: yes');
+  });
+});
+```
+
+kendobox custom confirm:
+```javascript
+$('#btn-custom-confirm').click(function () {
+  $.kendobox.confirm('Are you sure?', function() {
+    $.kendobox.notice_info('Custom Confirm result: yes');
+  },{
+    width: 600,
+    title: 'Custom Confirm',
+    button: [{
+      name: '是',
+      class: 'yes',
+      focus: true,
+      callback: function() {
+        $.kendobox.notice_success('Custom Confirm result: yes');
+        $.kendobox.close();
+      }
+    },{
+      name: '否',
+      class: 'no',
+      callback: function() {
+        $.kendobox.notice_error('Custom Confirm result: no');
+        $.kendobox.close();
+      }
+    },{
+      name: '取消',
+      class: 'cancel',
+      callback: function() {
+        $.kendobox.close();
+      }
+    }]
+  });
+});
+```
+
+kendobox dialog:
+```javascript
+$('#btn-dialog').click(function () {
+  $.kendobox.dialog($('#tpl-dialog').html(), function() {
+    $.kendobox.validator('form[name=dialog]', function(){
+      var data = $('form[name=dialog]').serializeArray();
+      $.kendobox.notice_info('Dialog result: ' + data[0].value);
+      $.kendobox.close();
+    });
+  });
+});
+```
+
+kendobox custom dialog:
+```javascript
+$('#btn-custom-dialog').click(function () {
+  $.kendobox.dialog($('#tpl-dialog').html(), function() {
+    $.kendobox.validator('form[name=dialog]', function(){
+      var data = $('form[name=dialog]').serializeArray();
+      $.kendobox.notice_info('Dialog result: ' + data[0].value);
+      $.kendobox.close();
+    });
+  },{
+    width: 600,
+    title: 'Custom Dialog',
+    button: [{
+      name: '提交',
+      class: 'submit',
+      focus: true,
+      callback: function() {
+        $.kendobox.validator('form[name=dialog]', function(){
+          var data = $('form[name=dialog]').serializeArray();
+          $.kendobox.notice_info('Dialog result: ' + data[0].value);
+          $.kendobox.close();
+        });
+      }
+    },{
+      name: '重置',
+      class: 'reset',
+      callback: function() {
+        $('form[name=dialog]').find('input').val('');
+        $.kendobox.notice_info('Dialog result: reset');
+      }
+    },{
+      name: '取消',
+      class: 'cancel',
+      callback: function() {
+        $.kendobox.close();
+      }
+    }]
+  });
+});
+```
