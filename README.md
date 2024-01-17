@@ -64,7 +64,7 @@ $('#btn-custom-confirm').click(function () {
     width: 600,
     title: 'Custom Confirm',
     button: [{
-      name: '是',
+      name: 'Yes',
       class: 'yes',
       focus: true,
       callback: function() {
@@ -72,14 +72,14 @@ $('#btn-custom-confirm').click(function () {
         $.kendobox.close();
       }
     },{
-      name: '否',
+      name: 'No',
       class: 'no',
       callback: function() {
         $.kendobox.notice_error('Custom Confirm result: no');
         $.kendobox.close();
       }
     },{
-      name: '取消',
+      name: 'Cancel',
       class: 'cancel',
       callback: function() {
         $.kendobox.close();
@@ -115,7 +115,7 @@ $('#btn-custom-dialog').click(function () {
     width: 600,
     title: 'Custom Dialog',
     button: [{
-      name: '提交',
+      name: 'Submit',
       class: 'submit',
       focus: true,
       callback: function() {
@@ -126,14 +126,14 @@ $('#btn-custom-dialog').click(function () {
         });
       }
     },{
-      name: '重置',
+      name: 'Reset',
       class: 'reset',
       callback: function() {
         $('form[name=dialog]').find('input').val('');
         $.kendobox.notice_info('Dialog result: reset');
       }
     },{
-      name: '取消',
+      name: 'Cancel',
       class: 'cancel',
       callback: function() {
         $.kendobox.close();
