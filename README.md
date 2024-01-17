@@ -2,7 +2,7 @@
 Kendo UI Components Plugins Custom alert, confirm, dialog, validator, notice
 
 # Examples
-[See examples](https://reggieqiao.github.io/kendobox)
+[Visit examples](https://reggieqiao.github.io/kendobox)
 
 # Dependencies 
 1. Latest version of [jQuery](https://jquery.com/)
