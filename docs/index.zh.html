@@ -1,0 +1,175 @@
+---
+layout: default
+---
+
+
+<!-- Kendo UI style -->
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
+
+<div class="container">
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox alert</span><br><span style="color:#000">$</span>(<span style="color:#a11">"#btn-alert"</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">alert</span>(<span style="color:#a11">'Hello world'</span>,<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Hello world callback'</span>);<br>  });<br>});<br><span style="color:#a50">//End:kendobox alert</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-alert">Alert</a>
+  </div>
+  <hr><br>
+
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox custom alert</span><br><span style="color:#000">$</span>(<span style="color:#a11">'#btn-custom-alert'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">alert</span>(<span style="color:#a11">'Hello world'</span>,<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Hello world callback'</span>);<br>  },<br>  {<br>    <span style="color:#000">width</span>: <span style="color:#164">600</span>,<br>    <span style="color:#000">title</span>: <span style="color:#a11">'Custom Alert'</span><br>  });<br>});<br><span style="color:#a50">//End:kendobox custom alert</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-custom-alert">Custom Alert</a>
+  </div>
+  <hr><br>
+
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox confirm</span><br><span style="color:#000">$</span>(<span style="color:#a11">"#btn-confirm"</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">confirm</span>(<span style="color:#a11">'Are you sure?'</span>,<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Confirm result: yes'</span>);<br>  });<br>});<br><span style="color:#a50">//End:kendobox confirm</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-confirm">Confirm</a>
+  </div>
+  <hr><br>
+
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox custom confirm</span><br><span style="color:#000">$</span>(<span style="color:#a11">'#btn-custom-confirm'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">confirm</span>(<span style="color:#a11">'Are you sure?'</span>,<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Custom Confirm result: yes'</span>);<br>  },<br>  {<br>    <span style="color:#000">width</span>: <span style="color:#164">600</span>,<br>    <span style="color:#000">title</span>: <span style="color:#a11">'Custom Confirm'</span>,<br>    <span style="color:#000">button</span>: [{<br>      <span style="color:#000">name</span>: <span style="color:#a11">'是'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'yes'</span>,<br>      <span style="color:#000">focus</span>: <span style="color:#219">true</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_success</span>(<span style="color:#a11">'Custom Confirm result: yes'</span>);<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>      }<br>    },<br>    {<br>      <span style="color:#000">name</span>: <span style="color:#a11">'否'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'no'</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_error</span>(<span style="color:#a11">'Custom Confirm result: no'</span>);<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>      }<br>    },<br>    {<br>      <span style="color:#000">name</span>: <span style="color:#a11">'取消'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'cancel'</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>      }<br>    }]<br>  });<br>});<br><span style="color:#a50">//End:kendobox custom confirm</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-custom-confirm">Custom Confirm</a>
+  </div>
+  <hr><br>
+
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox dialog</span><br><span style="color:#000">$</span>(<span style="color:#a11">'#btn-dialog'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">dialog</span>(<span style="color:#000">$</span>(<span style="color:#a11">'#tpl-dialog'</span>).<span style="color:#000">html</span>(),<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">validator</span>(<span style="color:#a11">'form[name=dialog]'</span>,<br>    <span style="color:#708">function</span>() {<br>      <span style="color:#708">var</span> <span style="color:#00f">data</span> = <span style="color:#000">$</span>(<span style="color:#a11">'form[name=dialog]'</span>).<span style="color:#000">serializeArray</span>();<br>      <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Dialog result: '</span> + <span style="color:#000-2">data</span>[<span style="color:#164">0</span>].<span style="color:#000">value</span>);<br>      <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>    });<br>  });<br>});<br><span style="color:#a50">//End:kendobox dialog</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-dialog">Dialog</a>
+  </div>
+  <hr><br>
+
+  <div>
+    <pre style="margin:20px 0;font:100 16px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ddd 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">//Begin:kendobox custom dialog</span><br><span style="color:#000">$</span>(<span style="color:#a11">'#btn-custom-dialog'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>() {<br>  <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">dialog</span>(<span style="color:#000">$</span>(<span style="color:#a11">'#tpl-dialog'</span>).<span style="color:#000">html</span>(),<br>  <span style="color:#708">function</span>() {<br>    <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">validator</span>(<span style="color:#a11">'form[name=dialog]'</span>,<br>    <span style="color:#708">function</span>() {<br>      <span style="color:#708">var</span> <span style="color:#00f">data</span> = <span style="color:#000">$</span>(<span style="color:#a11">'form[name=dialog]'</span>).<span style="color:#000">serializeArray</span>();<br>      <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Dialog result: '</span> + <span style="color:#000-2">data</span>[<span style="color:#164">0</span>].<span style="color:#000">value</span>);<br>      <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>    });<br>  },<br>  {<br>    <span style="color:#000">width</span>: <span style="color:#164">600</span>,<br>    <span style="color:#000">title</span>: <span style="color:#a11">'Custom Dialog'</span>,<br>    <span style="color:#000">button</span>: [{<br>      <span style="color:#000">name</span>: <span style="color:#a11">'提交'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'submit'</span>,<br>      <span style="color:#000">focus</span>: <span style="color:#219">true</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">validator</span>(<span style="color:#a11">'form[name=dialog]'</span>,<br>        <span style="color:#708">function</span>() {<br>          <span style="color:#708">var</span> <span style="color:#00f">data</span> = <span style="color:#000">$</span>(<span style="color:#a11">'form[name=dialog]'</span>).<span style="color:#000">serializeArray</span>();<br>          <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Dialog result: '</span> + <span style="color:#000-2">data</span>[<span style="color:#164">0</span>].<span style="color:#000">value</span>);<br>          <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>        });<br>      }<br>    },<br>    {<br>      <span style="color:#000">name</span>: <span style="color:#a11">'重置'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'reset'</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>(<span style="color:#a11">'form[name=dialog]'</span>).<span style="color:#000">find</span>(<span style="color:#a11">'input'</span>).<span style="color:#000">val</span>(<span style="color:#a11">''</span>);<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">notice_info</span>(<span style="color:#a11">'Dialog result: reset'</span>);<br>      }<br>    },<br>    {<br>      <span style="color:#000">name</span>: <span style="color:#a11">'取消'</span>,<br>      <span style="color:#000">class</span>: <span style="color:#a11">'cancel'</span>,<br>      <span style="color:#000">callback</span>: <span style="color:#708">function</span>() {<br>        <span style="color:#000">$</span>.<span style="color:#000">kendobox</span>.<span style="color:#000">close</span>();<br>      }<br>    }]<br>  });<br>});<br><span style="color:#a50">//End:kendobox custom dialog</span><br></pre>
+    <a href="javascript:;" class="k-button k-primary" id="btn-custom-dialog">Custom Dialog</a>
+  </div>
+  <hr><br>
+
+</div>
+
+<script id="tpl-dialog" type="text/x-kendo-template">
+  <form name="dialog" style="width:90%;">
+    <div class="form-group">
+      <label for="exampleInputEmail">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" required>
+    </div>
+  </form>
+</script>
+<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"></script>
+<!-- Kendo UI js -->
+<script src="https://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"></script>
+<!-- kendobox -->
+<script src="{{ '/assets/js/jquery.kendobox.min.js' | relative_url }}"></script>
+<script>
+//Begin:kendobox alert
+$('#btn-alert').click(function () {
+  $.kendobox.alert('Hello world', function() {
+    $.kendobox.notice_info('Hello world callback');
+  });
+});
+//End:kendobox alert
+
+//Begin:kendobox custom alert
+$('#btn-custom-alert').click(function () {
+  $.kendobox.alert('Hello world', function() {
+    $.kendobox.notice_info('Hello world callback');
+  },{
+    width: 600,
+    title: 'Custom Alert'
+  });
+});
+//End:kendobox custom alert
+
+//Begin:kendobox confirm
+$('#btn-confirm').click(function () {
+  $.kendobox.confirm('Are you sure?', function() {
+    $.kendobox.notice_info('Confirm result: yes');
+  });
+});
+//End:kendobox confirm
+
+//Begin:kendobox custom confirm
+$('#btn-custom-confirm').click(function () {
+  $.kendobox.confirm('Are you sure?', function() {
+    $.kendobox.notice_info('Custom Confirm result: yes');
+  },{
+    width: 600,
+    title: 'Custom Confirm',
+    button: [{
+      name: '是',
+      class: 'yes',
+      focus: true,
+      callback: function() {
+        $.kendobox.notice_success('Custom Confirm result: yes');
+        $.kendobox.close();
+      }
+    },{
+      name: '否',
+      class: 'no',
+      callback: function() {
+        $.kendobox.notice_error('Custom Confirm result: no');
+        $.kendobox.close();
+      }
+    },{
+      name: '取消',
+      class: 'cancel',
+      callback: function() {
+        $.kendobox.close();
+      }
+    }]
+  });
+});
+//End:kendobox custom confirm
+
+//Begin:kendobox dialog
+$('#btn-dialog').click(function () {
+  $.kendobox.dialog($('#tpl-dialog').html(), function() {
+    $.kendobox.validator('form[name=dialog]', function(){
+      var data = $('form[name=dialog]').serializeArray();
+      $.kendobox.notice_info('Dialog result: ' + data[0].value);
+      $.kendobox.close();
+    });
+  });
+});
+//End:kendobox dialog
+
+//Begin:kendobox custom dialog
+$('#btn-custom-dialog').click(function () {
+  $.kendobox.dialog($('#tpl-dialog').html(), function() {
+    $.kendobox.validator('form[name=dialog]', function(){
+      var data = $('form[name=dialog]').serializeArray();
+      $.kendobox.notice_info('Dialog result: ' + data[0].value);
+      $.kendobox.close();
+    });
+  },{
+    width: 600,
+    title: 'Custom Dialog',
+    button: [{
+      name: '提交',
+      class: 'submit',
+      focus: true,
+      callback: function() {
+        $.kendobox.validator('form[name=dialog]', function(){
+          var data = $('form[name=dialog]').serializeArray();
+          $.kendobox.notice_info('Dialog result: ' + data[0].value);
+          $.kendobox.close();
+        });
+      }
+    },{
+      name: '重置',
+      class: 'reset',
+      callback: function() {
+        $('form[name=dialog]').find('input').val('');
+        $.kendobox.notice_info('Dialog result: reset');
+      }
+    },{
+      name: '取消',
+      class: 'cancel',
+      callback: function() {
+        $.kendobox.close();
+      }
+    }]
+  });
+});
+//End:kendobox custom dialog
+</script>
