@@ -1,3 +1,6 @@
+- [English](README.md)
+- [简体中文](README.zh.md)
+
 # Kendobox
 Kendo UI 插件包括自定义警报、确认、对话框、验证、通知
 

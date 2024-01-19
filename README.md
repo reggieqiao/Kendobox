@@ -1,3 +1,6 @@
+- [English](README.md)
+- [简体中文](README.zh.md)
+
 # Kendobox
 Kendo UI Components Plugins Custom alert, confirm, dialog, validator, notice
 
